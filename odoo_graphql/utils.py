@@ -133,7 +133,7 @@ def relation_subgathers(records, relational_data, variables={}):
             # Nb: Even if its the same field, the domain may change
             alias = f.alias and f.alias.value or f.name.value
             tmp = parse_model_field(
-                submodel, f, variables=variables, ids=sub_records_ids
+                submodel, f, fname, variables=variables, ids=sub_records_ids
             )
             data = {d["id"]: (i, d) for i, d in enumerate(tmp)}
 
